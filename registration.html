@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles_registration.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar-left">
+                <img src="logo.jfif" alt="Company Logo">
+                <span>iVEST</span>
+            </div>
+            <div class="navbar-right">
+                <a href="index.html">Home</a>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="registration-section">
+        <h2>Registration</h2>
+        <form id="registration-form" onsubmit="return validateForm()">
+            <select id="user-type" required>
+                <option value="" disabled selected>Select User Type</option>
+                <option value="client">Client</option>
+                <option value="advisor">Advisor</option>
+            </select>
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+            <input type="date" id="dob" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <input type="text" id="certification-number" placeholder="Certification Number (for Advisors)">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Investment Advisor Portal. All rights reserved.</p>
+    </footer>
+    <script src="validation.js" defer></script>
+</body>
+</html>
